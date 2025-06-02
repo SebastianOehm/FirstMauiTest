@@ -1,0 +1,11 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstMauiTest.ErfolgPage"
+             Title="Erfolg">
+
+	<VerticalStackLayout Padding="30" Spacing="20">
+		<Label Text="✔ Authentifizierung erfolgreich!" FontSize="24" TextColor="Green" />
+		<WebView Source="https://www.telekom.de" HeightRequest="600" />
+		<Button Text="Zurück" Clicked="OnBackClicked" />
+	</VerticalStackLayout>
+</ContentPage>
