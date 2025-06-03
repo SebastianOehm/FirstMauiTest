@@ -1,0 +1,23 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstMauiTest.UmrechnerPage"
+             Title="Umrechner">
+
+    <VerticalStackLayout Padding="30" Spacing="20">
+        <HorizontalStackLayout>
+            <Entry x:Name="InputValue" Placeholder="Zahl 1" Keyboard="Numeric"/>
+            <Entry x:Name="InputUnit" Placeholder="Einheit (z.B. m, km, cm)" 
+                   Keyboard="Text"/>
+            <Entry x:Name="OutputUnit" Placeholder="Ziel-Einheit (z.B. m, km, cm)" 
+                   Keyboard="Text"/>
+        </HorizontalStackLayout>
+        <Button Text="Convert" Clicked="OnConvertClicked"/>
+        <Label x:Name="ResultLabel" Text="Ergebnis: " FontSize="20"/>
+        <HorizontalStackLayout>
+           <Button Text="Clear" Clicked="OnClearClicked"/>
+            <Button Text="Copy" Clicked="OnCopyClicked"/>
+        </HorizontalStackLayout>
+        
+        <Button Text="Zurück" Clicked="OnBackClicked" />
+    </VerticalStackLayout>
+</ContentPage>
