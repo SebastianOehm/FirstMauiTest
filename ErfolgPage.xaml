@@ -7,6 +7,7 @@
 		<Label x:Name="ErfolgLabel" FontSize="24" TextColor="Green" />
 		<!--<WebView Source="https://www.telekom.de" HeightRequest="600" WidthRequest="600" />-->
         <Button Text="Rechner" Clicked="OnRechnerClicked" />
+        <Button Text="Umrechner" Clicked="OnUmrechnerClicked" />
         <Button Text="Zurück" Clicked="OnBackClicked" />
 	</VerticalStackLayout>
 </ContentPage>

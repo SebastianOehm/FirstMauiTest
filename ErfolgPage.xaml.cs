@@ -12,6 +12,10 @@ public partial class ErfolgPage : ContentPage
     {
         await Shell.Current.GoToAsync("rechner");
     }
+    private async void OnUmrechnerClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("umrechner");
+    }
 
     private async void OnBackClicked(object sender, EventArgs e)
     {
