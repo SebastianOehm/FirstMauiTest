@@ -6,6 +6,7 @@
         {
             InitializeComponent();
             Routing.RegisterRoute("erfolg", typeof(ErfolgPage));
+            Routing.RegisterRoute("rechner", typeof(RechnerPage));
         }
     }
 }
