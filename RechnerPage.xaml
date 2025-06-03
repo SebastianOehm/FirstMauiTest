@@ -6,8 +6,19 @@
     <VerticalStackLayout Padding="30" Spacing="20">
         <Entry x:Name="Number1Entry" Placeholder="Zahl 1" Keyboard="Numeric"/>
         <Entry x:Name="Number2Entry" Placeholder="Zahl 2" Keyboard="Numeric"/>
-
-        <Button Text="Addieren" Clicked="OnAddClicked"/>
+        <Picker x:Name="OperatorPicker" Title="Operator" SelectedIndex="0">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>+</x:String>
+                    <x:String>-</x:String>
+                    <x:String>*</x:String>
+                    <x:String>/</x:String>
+                    <x:String>^</x:String>
+                    <x:String>%</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Button Text="Calculate" Clicked="OnCalculateClicked"/>
 
         <Label x:Name="ResultLabel" Text="Ergebnis: " FontSize="20"/>
 		<Button Text="Zurück" Clicked="OnBackClicked" />
