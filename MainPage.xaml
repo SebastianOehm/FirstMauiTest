@@ -4,7 +4,7 @@
              Title="Start">
 
     <VerticalStackLayout Padding="30" Spacing="20">
-        <Button Text="Authentifizieren" Clicked="OnAuthenticateClicked"/>
-        <Label x:Name="StatusLabel" Text="" TextColor="Red"/>
+        <Button Text="Authentifizieren" Clicked="OnAuthenticateClicked" WidthRequest="200" />
+        <Label x:Name="StatusLabel" Text="" TextColor="Red" FontSize="Large" HorizontalTextAlignment="Center"/>
     </VerticalStackLayout>
 </ContentPage>
