@@ -30,10 +30,10 @@ public partial class UmrechnerPage : ContentPage
     }
     private void OnClearClicked(object sender, EventArgs e)
     {
-        InputValue.Text = ""; // Reset input value
-        InputUnit.Text = ""; // Reset input unit
-        OutputUnit.Text = ""; // Reset output value
-        ResultLabel.Text = ""; // Reset result label
+        InputValue.Text = "";
+        InputUnit.Text = "";
+        OutputUnit.Text = "";
+        ResultLabel.Text = "";
     }
     private void OnCopyClicked(object sender, EventArgs e)
     {
