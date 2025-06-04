@@ -15,8 +15,8 @@ public partial class UmrechnerPage : ContentPage
 
         try
         {
-            string from = InputUnit.Text?.Trim().ToLower();
-            string to = OutputUnit.Text?.Trim().ToLower();
+            string from = InputUnit.Text?.Trim()?.ToLower() ?? string.Empty;
+            string to = OutputUnit.Text?.Trim()?.ToLower() ?? string.Empty;
 
             double result = ConvertValue(inputVal, from, to);
             var fromSymbol = units[from].Symbol;
