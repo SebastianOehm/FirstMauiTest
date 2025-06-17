@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36127.28 d17.14
+VisualStudioVersion = 17.14.36127.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstMauiTest", "FirstMauiTest.csproj", "{C44045B5-DCF8-4E0D-A6DD-FDC7885E734D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstMauiTest.Tests", "..\FirstMauiTest.Tests\FirstMauiTest.Tests.csproj", "{4EDAD0F5-4953-4495-A094-6B3D57332055}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C44045B5-DCF8-4E0D-A6DD-FDC7885E734D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C44045B5-DCF8-4E0D-A6DD-FDC7885E734D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C44045B5-DCF8-4E0D-A6DD-FDC7885E734D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EDAD0F5-4953-4495-A094-6B3D57332055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EDAD0F5-4953-4495-A094-6B3D57332055}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EDAD0F5-4953-4495-A094-6B3D57332055}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EDAD0F5-4953-4495-A094-6B3D57332055}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
