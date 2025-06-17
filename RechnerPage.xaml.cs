@@ -1,4 +1,5 @@
-﻿namespace FirstMauiTest;
+﻿using FirstMauiTest.Core;
+namespace FirstMauiTest;
 public partial class RechnerPage : ContentPage
 {
     public RechnerPage()

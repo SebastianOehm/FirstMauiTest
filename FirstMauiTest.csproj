@@ -66,6 +66,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\FirstMauiTest.Core\FirstMauiTest.Core.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <Compile Update="Umrechner.xaml.cs">
 	    <DependentUpon>Umrechner.xaml</DependentUpon>
 	  </Compile>
