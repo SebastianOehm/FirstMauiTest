@@ -1,10 +1,10 @@
 ﻿# Build artifacts
-build/
-[Bb]in/
-[Oo]bj/
+*/build/
+*/[Bb]in/
+*/[Oo]bj/
 
 # VS-specific
-.vs/
+*/.vs/
 *.user
 *.suo
 *.sln.docstates
