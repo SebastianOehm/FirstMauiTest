@@ -1,18 +1,30 @@
+﻿using NCalc;
+using System.Text.RegularExpressions;
 namespace FirstMauiTest.Core;
+
 
 public static class Calculator
 {
-    public static double Calculate(double num1, double num2, string op)
+    public static double EvaluateExpression(string input)
     {
-        return op switch
+        // Ersetze alle a^b durch pow(a,b)
+        input = Regex.Replace(input, @"(\d+(?:\.\d+)?)\s*\^\s*(\d+(?:\.\d+)?)", "pow($1,$2)");
+
+        var expr = new Expression(input);
+
+        expr.EvaluateFunction += (name, args) =>
         {
-            "+" => num1 + num2,
-            "-" => num1 - num2,
-            "*" => num1 * num2,
-            "/" => num2 != 0 ? num1 / num2 : double.NaN,
-            "^" => Math.Pow(num1, num2),
-            "%" => num1 % num2,
-            _ => 0
+            if (name == "pow" && args.Parameters.Length == 2)
+            {
+                var baseNum = Convert.ToDouble(args.Parameters[0].Evaluate());
+                var exponent = Convert.ToDouble(args.Parameters[1].Evaluate());
+                args.Result = Math.Pow(baseNum, exponent);
+            }
         };
+
+        object result = expr.Evaluate();
+        double val = Convert.ToDouble(result);
+
+        return double.IsInfinity(val) ? double.NaN : val;
     }
 }

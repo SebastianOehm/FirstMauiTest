@@ -4,23 +4,63 @@
              Title="Taschenrechner">
 
     <VerticalStackLayout Padding="30" Spacing="20">
-        <Entry x:Name="Number1Entry" Placeholder="Zahl 1" Keyboard="Numeric"/>
-        <Entry x:Name="Number2Entry" Placeholder="Zahl 2" Keyboard="Numeric"/>
-        <Picker x:Name="OperatorPicker" Title="Operator" SelectedIndex="0">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>+</x:String>
-                    <x:String>-</x:String>
-                    <x:String>*</x:String>
-                    <x:String>/</x:String>
-                    <x:String>^</x:String>
-                    <x:String>%</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
-        <Button Text="Calculate" Clicked="OnCalculateClicked"/>
 
-        <Label x:Name="ResultLabel" Text="Ergebnis: " FontSize="20"/>
-		<Button Text="Zurück" Clicked="OnBackClicked" />
+        <!-- Display -->
+        <Label x:Name="ResultLabel"
+               Text=""
+               FontSize="32"
+               HorizontalTextAlignment="End"
+               VerticalOptions="Center"
+               HeightRequest="60"
+               BackgroundColor="LightGray"
+               Padding="10"/>
+
+        <!-- Button Grid -->
+        <Grid RowSpacing="10" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Row 0 -->
+            <Button Text="7" Grid.Row="0" Grid.Column="0" Clicked="OnButtonClicked"/>
+            <Button Text="8" Grid.Row="0" Grid.Column="1" Clicked="OnButtonClicked"/>
+            <Button Text="9" Grid.Row="0" Grid.Column="2" Clicked="OnButtonClicked"/>
+            <Button Text="+" Grid.Row="0" Grid.Column="3" Clicked="OnButtonClicked"/>
+
+            <!-- Row 1 -->
+            <Button Text="4" Grid.Row="1" Grid.Column="0" Clicked="OnButtonClicked"/>
+            <Button Text="5" Grid.Row="1" Grid.Column="1" Clicked="OnButtonClicked"/>
+            <Button Text="6" Grid.Row="1" Grid.Column="2" Clicked="OnButtonClicked"/>
+            <Button Text="-" Grid.Row="1" Grid.Column="3" Clicked="OnButtonClicked"/>
+
+            <!-- Row 2 -->
+            <Button Text="1" Grid.Row="2" Grid.Column="0" Clicked="OnButtonClicked"/>
+            <Button Text="2" Grid.Row="2" Grid.Column="1" Clicked="OnButtonClicked"/>
+            <Button Text="3" Grid.Row="2" Grid.Column="2" Clicked="OnButtonClicked"/>
+            <Button Text="*" Grid.Row="2" Grid.Column="3" Clicked="OnButtonClicked"/>
+
+            <!-- Row 3 -->
+            <Button Text="0" Grid.Row="3" Grid.Column="0" Clicked="OnButtonClicked"/>
+            <Button Text="." Grid.Row="3" Grid.Column="1" Clicked="OnButtonClicked"/>
+            <Button Text="Del" Grid.Row="3" Grid.Column="2" Clicked="OnDeleteClicked"/>
+            <Button Text="/" Grid.Row="3" Grid.Column="3" Clicked="OnButtonClicked"/>
+
+            <!-- Row 4 -->
+            <Button Text="^" Grid.Row="4" Grid.Column="0" Clicked="OnButtonClicked"/>
+            <Button Text="%" Grid.Row="4" Grid.Column="1" Clicked="OnButtonClicked"/>
+            <Button Text="=" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Clicked="OnEqualsClicked"/>
+        </Grid>
+
+        <Button Text="Zurück" Clicked="OnBackClicked" />
     </VerticalStackLayout>
 </ContentPage>
