@@ -21,10 +21,9 @@ public partial class UmrechnerPage : ContentPage
             string to = OutputUnit.Text?.Trim()?.ToLower() ?? string.Empty;
 
             double result = ConvertValue(inputVal, from, to);
-            var fromSymbol = units[from].Symbol;
-            var toSymbol = units[to].Symbol;
+            string fromSymbol = units[from].Symbol;
+            string toSymbol = units[to].Symbol;
             ResultLabel.Text = $"{inputVal}{fromSymbol} = {result:F2}{toSymbol}";
-            // await TextToSpeech.Default.SpeakAsync(ResultLabel.Text);
         }
         catch (Exception ex)
         {
