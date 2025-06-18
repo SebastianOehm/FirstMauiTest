@@ -1,0 +1,91 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstMauiTest.UmrechnerPage"
+             Title="Umrechner">
+
+    <ScrollView>
+        <Grid Padding="20"
+              HorizontalOptions="Center"
+              VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <VerticalStackLayout x:Name="MainContainer"
+                                 Spacing="20"
+                                 WidthRequest="350"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center">
+
+                <!-- Eingabezeile -->
+                <Grid ColumnSpacing="10"
+                      ColumnDefinitions="*,Auto,Auto">
+                    <Label x:Name="InputDisplay"
+                           Grid.Column="0"
+                           Text="0"
+                           FontSize="32"
+                           VerticalOptions="Center"
+                           HorizontalTextAlignment="Start" />
+
+                    <Picker x:Name="FromUnitPicker"
+                            Grid.Column="1"
+                            Title="Von"
+                            WidthRequest="100"
+                            VerticalOptions="Center" />
+
+                    <Picker x:Name="ToUnitPicker"
+                            Grid.Column="2"
+                            Title="Zu"
+                            WidthRequest="100"
+                            VerticalOptions="Center" />
+                </Grid>
+
+                <!-- Keypad -->
+                <Grid ColumnSpacing="10" RowSpacing="10"
+                      HorizontalOptions="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Text="1" Grid.Row="0" Grid.Column="0" Clicked="OnKeypadClicked"/>
+                    <Button Text="2" Grid.Row="0" Grid.Column="1" Clicked="OnKeypadClicked"/>
+                    <Button Text="3" Grid.Row="0" Grid.Column="2" Clicked="OnKeypadClicked"/>
+                    <Button Text="4" Grid.Row="1" Grid.Column="0" Clicked="OnKeypadClicked"/>
+                    <Button Text="5" Grid.Row="1" Grid.Column="1" Clicked="OnKeypadClicked"/>
+                    <Button Text="6" Grid.Row="1" Grid.Column="2" Clicked="OnKeypadClicked"/>
+                    <Button Text="7" Grid.Row="2" Grid.Column="0" Clicked="OnKeypadClicked"/>
+                    <Button Text="8" Grid.Row="2" Grid.Column="1" Clicked="OnKeypadClicked"/>
+                    <Button Text="9" Grid.Row="2" Grid.Column="2" Clicked="OnKeypadClicked"/>
+                    <Button Text="C" Grid.Row="3" Grid.Column="0" Clicked="OnClearClicked"/>
+                    <Button Text="0" Grid.Row="3" Grid.Column="1" Clicked="OnKeypadClicked"/>
+                    <Button Text="⌫" Grid.Row="3" Grid.Column="2" Clicked="OnBackspaceClicked"/>
+                </Grid>
+
+                <!-- Ergebnis -->
+                <Label x:Name="ResultLabel"
+                       Text="Ergebnis:"
+                       FontSize="20"
+                       HorizontalOptions="Center" />
+
+                <!-- Action Buttons -->
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
+                    <Button Text="Convert" Clicked="OnConvertClicked"/>
+                    <Button Text="Copy" Clicked="OnCopyClicked"/>
+                </HorizontalStackLayout>
+
+                <!-- Zurück -->
+                <Button Text="Zurück"
+                        Clicked="OnBackClicked"
+                        HorizontalOptions="Center" />
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

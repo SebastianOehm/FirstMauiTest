@@ -70,8 +70,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Umrechner.xaml.cs">
-	    <DependentUpon>Umrechner.xaml</DependentUpon>
+	  <Compile Update="UmrechnerPage.xaml.cs">
+	    <DependentUpon>UmrechnerPage.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="RechnerPage.xaml.cs">
 	    <DependentUpon>RechnerPage.xaml</DependentUpon>
@@ -79,7 +79,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Umrechner.xaml">
+	  <MauiXaml Update="UmrechnerPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="RechnerPage.xaml">
